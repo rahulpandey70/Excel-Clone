@@ -1,4 +1,7 @@
 # Excel-Clone
-Created excel clone using Javascript Html Css and Graph Algorithm
+## Created excel clone using Javascript Html Css and Graph Algorithm
 
-NOTE:- This Isn't finished Yet, Basic structue done(UI Part) Algo Part willbe added soon.
+### Note:- This Isn't finished Yet, Basic structure done,
+UI Part, Font Size, Font family, Font color, Cell background color, Basic formula like:- Addition, Subtraction etc.
+
+![Screenshots](./screenshot/excelClone.jpg)
