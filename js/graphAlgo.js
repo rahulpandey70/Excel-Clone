@@ -35,12 +35,12 @@ function cyclicValidation(graphComponentMatrix) {
           visited,
           dfsVisited
         );
-        if (response == true) return true;
+        if (response == true) return [i, j];
       }
     }
   }
 
-  return false;
+  return null;
 }
 
 // Cycle detection condition-> if visited[i][j] === true && dfsVisited[i][j] === true, then cycle detected
