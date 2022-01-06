@@ -73,7 +73,9 @@ pasteBtn.addEventListener("click", (e) => {
 
   for (let i = stRow, r = 0; i <= stRow + rowDiff; i++, r++) {
     for (let j = stCol, c = 0; j <= stCol + colDiff; j++, c++) {
-      let cell = document.querySelector(`.cell-container[rid="${i}"][cid="${j}"]`);
+      let cell = document.querySelector(
+        `.cell-container[rid="${i}"][cid="${j}"]`
+      );
       if (!cell) continue;
 
       let data = copyData[r][c];
@@ -92,4 +94,39 @@ pasteBtn.addEventListener("click", (e) => {
       cell.click();
     }
   }
+});
+
+// Cut
+cutBtn.addEventListener("click", (e) => {
+  if (rangeStorage.length < 2) return;
+
+  let [strow, stcol, endrow, endcol] = [
+    rangeStorage[0][0],
+    rangeStorage[0][1],
+    rangeStorage[1][0],
+    rangeStorage[1][1],
+  ];
+
+  for (let i = strow; i <= endrow; i++) {
+    for (let j = stcol; j <= endcol; j++) {
+      let cell = document.querySelector(
+        `.cell-container[rid="${i}"][cid="${j}"]`
+      );
+
+      let cellProp = sheetDB[i][j];
+      cellProp.value = "";
+      cellProp.bold = false;
+      cellProp.italic = false;
+      cellProp.underline = false;
+      cellProp.fontSize = 14;
+      cellProp.fontFamily = "monospace";
+      cellProp.fontColor = "#000000";
+      cellProp.BGcolor = "#000000";
+      cellProp.alignment = "left";
+
+      cell.click();
+    }
+  }
+
+  handleSelectedCellsUI();
 });
