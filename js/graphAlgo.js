@@ -1,14 +1,15 @@
 // Cycle Validation Detection
 // Storage
+let collectedGraphComponent = [];
 let graphComponentMatrix = [];
 
-for (let i = 0; i < rows; i++) {
-  let row = [];
-  for (let j = 0; j < col; j++) {
-    row.push([]);
-  }
-  graphComponentMatrix.push(row);
-}
+// for (let i = 0; i < rows; i++) {
+//   let row = [];
+//   for (let j = 0; j < col; j++) {
+//     row.push([]);
+//   }
+//   graphComponentMatrix.push(row);
+// }
 
 function cyclicValidation(graphComponentMatrix) {
   let visited = []; 

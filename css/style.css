@@ -90,7 +90,7 @@ body{
     padding-left: 0.5rem;
     padding-right: 0.5rem;
     gap: 1rem;
-    background-color: #d5d9da;
+    background-color: #ecf0f1;
 }
 
 .sheet-actions-container > * {
@@ -107,6 +107,7 @@ body{
     display: flex;
     align-items: center;
     width: calc(100vw - 2vw);
+    overflow: auto;
 }
 
 .sheet-folder {
@@ -115,6 +116,15 @@ body{
     text-decoration-thickness: 3px;
     cursor: pointer;
     font-size: 0.9rem;
+    height: 80%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sheet-content {
+    width: 5rem;
 }
 
 .grid-container {

@@ -80,7 +80,7 @@ async function dfsCycleDetectionTracePath(
       cyclicCell.style.backgroundColor = "lightsalmon";
       await colorPromise();
       cyclicCell.style.backgroundColor = "transparent";
-      
+
       cell.style.backgroundColor = "transparent";
       await colorPromise();
 
