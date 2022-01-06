@@ -99,7 +99,10 @@ body{
 
 .sheet-add-icon {
     width: 2vw;
-    cursor: pointer;
+}
+
+.sheet-add-icon:hover {
+    cursor: default;
 }
 
 .sheet-folder-container {
