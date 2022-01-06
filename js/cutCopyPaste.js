@@ -16,6 +16,10 @@ for (let i = 0; i < rows; i++) {
   }
 }
 
+let copyBtn = document.querySelector(".copy");
+let pasteBtn = document.querySelector(".paste");
+let cutBtn = document.querySelector(".cut");
+
 let rangeStorage = [];
 function handleSelectedCells(cell) {
   cell.addEventListener("click", (e) => {
